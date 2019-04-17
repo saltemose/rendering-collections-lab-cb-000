@@ -1,0 +1,17 @@
+<% if !!invoice %>
+  <h1>Invoices</h1>
+  <table>
+    <tr>
+      <th>Invoice Id
+      <th>Customer</th>
+    </tr>
+    <tr>
+      <th><%= invoice.id %></th>
+      <th><%= invoice.orders.first ? invoice.orders.first.customer.name : "No Orders" %></th>
+    </tr>
+  </table>
+<% else %>
+  <h3>
+    No Invoices
+  </h3>
+<% end %>
